@@ -1,0 +1,351 @@
+<?xml version="1.0" ?>
+<robot name="super_pi">
+
+    <link name="base_link">
+        <visual>
+            <origin xyz=" 0 0 0.080" rpy="0 0 0" />
+            <geometry>
+                <box size="0.6 0.2800 0.003"/>
+            </geometry>
+            <material name="white">
+                <color rgba="0.5 0.5 0.5 1.0"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="imu_joint" type="fixed">
+        <origin xyz="0.15 -0.16 0.305" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="imu_link"/>
+    </joint>
+
+    <link name="imu_link">
+        <visual>
+            <origin xyz="0 0 0.0" rpy="0 0 0" />
+             <geometry>
+                <box size="0.08 0.05 0.012"/>
+            </geometry>
+            <material name="green">
+                <color rgba="0 1 1 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="left_wheel_joint" type="fixed">
+        <origin xyz="0.2 0.19 0.085" rpy="1.57 0 0"/>
+        <parent link="base_link"/>
+        <child link="left_wheel_link"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <link name="left_wheel_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.1" length = "0.09"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="right_wheel_joint" type="fixed">
+        <origin xyz="0.2 -0.19 0.085" rpy="1.57 0 0"/>
+        <parent link="base_link"/>
+        <child link="right_wheel_link"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <link name="right_wheel_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.1" length = "0.09"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="left_back_wheel_joint" type="fixed">
+        <origin xyz="-0.2 0.19 0.085" rpy="1.57 0 0"/>
+        <parent link="base_link"/>
+        <child link="left_back_wheel_link"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <link name="left_back_wheel_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.1" length = "0.09"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="right_back_wheel_joint" type="fixed">
+        <origin xyz="-0.2 -0.19 0.085" rpy="1.57 0 0"/>
+        <parent link="base_link"/>
+        <child link="right_back_wheel_link"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <link name="right_back_wheel_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.1" length = "0.09"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="zhu_zi_1_joint" type="fixed">
+        <origin xyz="0.17 -0.12 0.195" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="zhu_zi_1_link"/>
+    </joint>
+
+    <link name="zhu_zi_1_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+             <geometry>
+                <box size="0.02 0.02 0.21"/>
+            </geometry>
+            <material name="red">
+                <color rgba="0.5 0.5 0.5 0.7"/>
+            </material>
+        </visual>
+    </link>
+
+       <joint name="zhu_zi_2_joint" type="fixed">
+        <origin xyz="0.17 0.12 0.195" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="zhu_zi_2_link"/>
+    </joint>
+
+    <link name="zhu_zi_2_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+             <geometry>
+                <box size="0.02 0.02 0.21"/>
+            </geometry>
+            <material name="red">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+    </link>
+
+      <joint name="zhu_zi_3_joint" type="fixed">
+        <origin xyz="-0.17 0.12 0.195" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="zhu_zi_3_link"/>
+    </joint>
+
+    <link name="zhu_zi_3_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+             <geometry>
+                <box size="0.02 0.02 0.21"/>
+            </geometry>
+            <material name="red">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+    </link>
+
+     <joint name="zhu_zi_4_joint" type="fixed">
+        <origin xyz="-0.17 -0.12 0.195" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="zhu_zi_4_link"/>
+    </joint>
+
+    <link name="zhu_zi_4_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+             <geometry>
+                <box size="0.02 0.02 0.21"/>
+            </geometry>
+            <material name="red">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+    </link>
+
+
+      <joint name="sencond_base_joint" type="fixed">
+        <origin xyz="0 0 0.20" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="sencond_base_link"/>
+    </joint>
+      <link name="sencond_base_link">
+        <visual>
+            <origin xyz=" 0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.6 0.4000 0.003"/>
+            </geometry>
+            <material name="white">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+    </link>
+
+
+     <joint name="lidar_joint" type="fixed">
+        <origin xyz="0.12 0.0 0.41" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="base_scan"/>
+    </joint>
+
+    <link name="base_scan">
+        <visual>
+            <origin xyz="0 0 0.02" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.035" length = "0.04"/>
+            </geometry>
+            <material name="gray">
+                <color rgba="0.1 0.1 0.1 1"/>
+            </material>
+        </visual>
+    </link>
+
+
+
+   <joint name="third_base_joint" type="fixed">
+        <origin xyz="0 0 0.30" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="third_base_link"/>
+    </joint>
+      <link name="third_base_link">
+        <visual>
+            <origin xyz=" 0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.6 0.4000 0.003"/>
+            </geometry>
+            <material name="white">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+    </link>
+
+
+ <joint name="fourth_base_joint" type="fixed">
+        <origin xyz="0.12 0.0 0.336" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="fourth_base_link"/>
+    </joint>
+
+      <link name="fourth_base_link">
+        <visual>
+            <origin xyz=" 0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.13 0.13 0.4"/>
+            </geometry>
+            <material name="white">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+    </link>
+
+     <joint name="gps_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.32" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="gps_link"/>
+    </joint>
+
+      <link name="gps_link">
+        <visual>
+            <origin xyz=" 0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.10 0.10 0.04"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+         <joint name="aerial_zhuzi_joint" type="fixed">
+        <origin xyz="-0.25 0.0 0.345" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="aerial_zhuzi_link"/>
+    </joint>
+
+      <link name="aerial_zhuzi_link">
+        <visual>
+            <origin xyz=" 0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.015" length = "0.09"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+     <joint name="aerial_joint" type="fixed">
+        <origin xyz="-0.25 0.0 0.39" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="aerial_link"/>
+    </joint>
+          <link name="aerial_link">
+        <visual>
+            <origin xyz=" 0 0 0.0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.03" length = "0.02"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+
+  <joint name="camera_joint" type="fixed">
+        <origin xyz="0.26 0.0 0.33" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="camera_link"/>
+    </joint>
+
+    <link name="camera_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+             <geometry>
+                <box size="0.025 0.16 0.029"/>
+            </geometry>
+             <material name="yellow">
+                <color rgba="1 1 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+
+    <joint name="top_camera_joint" type="fixed">
+        <origin xyz="0.29 -0.0 0.21" rpy="3.14 -1.57 0.0"/>
+        <parent link="base_link"/>
+        <child link="top_camera_link"/>
+    </joint>
+
+    <link name="top_camera_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+             <geometry>
+                <box size="0.025 0.025 0.025"/>
+            </geometry>
+             <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+
+
+
+</robot>
