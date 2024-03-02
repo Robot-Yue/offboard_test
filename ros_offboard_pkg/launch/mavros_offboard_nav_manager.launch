@@ -1,0 +1,8 @@
+<launch>
+
+  <group>
+    <!--导航模式切换状态管理节点-->
+    <node name="offboard_nav_manager" pkg="ros_offboard_pkg" type="offboard_nav_manager" respawn="false" output="screen" />
+  </group>
+  
+</launch>
